@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>about — innovATE (innov8 60M)</title>
+  <meta name="description" content="about innovATE — automated data quality, mistake correction, and tabular verification powered by innov8 60M.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261004c">
+  <style>
+.about-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.about-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.zoom-line {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #1A1A1A;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+  cursor: default;
+}
+
+.zoom-line:hover {
+  transform: translateX(6px);
+  color: #000000;
+}
+
+.zoom-line.hero {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.35;
+  color: #000000;
+}
+
+.zoom-line strong {
+  font-weight: 700;
+  color: #000000;
+}
+
+.zoom-line code {
+  font-family: var(--font-mono);
+  background: #f1f1f4;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13.5px;
+}
+
+.about-author {
+  margin-top: 40px;
+  font-size: 14.5px;
+  color: #666666;
+  padding-top: 24px;
+  border-top: 1px solid #eeeeee;
+}
+
+.about-author a {
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+  </style>
+</head>
+<body style="overflow-y: auto;">
+  <!-- Custom Smooth Round Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="about-wrap">
+    <header class="about-header">
+      <a href="/" class="brand-title" style="font-size: 18px; font-weight: 700; text-decoration: none; color: #000000;">innovATE</a>
+      <nav class="header-nav" style="display: flex; gap: 16px; align-items: center;">
+        <span class="model-badge" style="font-size: 11px; padding: 4px 10px; border-radius: 12px; background: rgba(34, 197, 94, 0.12); color: #15803d; border: 1px solid rgba(34, 197, 94, 0.25); font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+          <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e;"></span>
+          Model: innov8 60M (omnitab_best.pth)
+        </span>
+        <a href="/" class="nav-link" style="text-decoration: none; color: #000000; font-size: 14px; font-weight: 500;">home</a>
+      </nav>
+    </header>
+
+    <main class="about-lines">
+      <div class="zoom-line hero">
+        innovATE is an automated data quality, mistake correction, and tabular verification system.
+      </div>
+
+      <div class="zoom-line">
+        <strong>Training Infrastructure:</strong> Trained on <strong>Google Colab A1000gpus / A100 GPUs</strong> and the <strong>APRIL King CLUSTER ( AMD )</strong> with PyTorch distributed data parallel scaling and DeepNorm numerical stabilization.
+      </div>
+
+      <div class="zoom-line">
+        <strong>Model:</strong> Powered by the <strong>innov8 60M</strong> neural architecture (<code>omnitab_best.pth</code>) with 20 Transformer layers for deterministic data cleaning, high-volume mistake correction, and autonomous data editing.
+      </div>
+
+      <div class="zoom-line">
+        <strong>Visual Difference Highlighting:</strong> Every transformation is tracked and visually differentiated. In text correction, mistakes are highlighted in red strikethrough (<code>&lt;del&gt;</code>) and corrected words in green chips (<code>&lt;ins&gt;</code>). In tabular workflows, modified columns are marked with <code>[MODIFIED]</code> headers and cell transitions are presented in Before vs After transformation tables.
+      </div>
+
+      <div class="zoom-line">
+        <strong>High-Volume Mistake Correction:</strong> Processes multi-paragraph text and documents, automatically detecting and repairing grammatical slips, common typographical mistakes, negative currency formatting, punctuation spacing, and sentence capitalization.
+      </div>
+
+      <div class="zoom-line">
+        <strong>Deterministic Governance & Anomaly Detection:</strong> Employs Median Absolute Deviation (MAD with 1.4826 Gaussian normal consistency factor), Tukey IQR fences, and Luhn Modulo 10 checksum verification for sensitive PII masking (Social Security Numbers and Credit Cards).
+      </div>
+
+      <div class="zoom-line">
+        <strong>Grounded Web Verification:</strong> Includes live factual web verification for current domain queries, clearly tagged with a <code>Web Active</code> badge to differentiate live external knowledge from offline neural inference.
+      </div>
+
+      <div class="zoom-line">
+        <strong>Local Execution:</strong> Operates locally on CPU with zero cloud telemetry, ensuring enterprise data privacy and deterministic latency.
+      </div>
+
+      <div class="zoom-line">
+        <strong>Team & Attribution:</strong> Created by <strong>Vedanth Vaidya</strong> for <strong>KLE Hackfest</strong>.<br>
+        Team Members: <strong>Shivprasad, Akshay, Riddhima, Sarvesh, and Chandana</strong>.
+      </div>
+
+      <div class="about-author">
+        built by Vedanth Vaidya — <a href="mailto:vedanthvaidya@aprilai.in">vedanthvaidya@aprilai.in</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="cursor.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+policy_name: ai_ready_workload_certification_policy
+rules:
+- dimension: Completeness
+  operator: gte
+  rule_id: POL-COMP-01
+  severity: BLOCKER
+  target: completeness
+  threshold: 92.0
+- dimension: Uniqueness
+  operator: gte
+  rule_id: POL-UNIQ-01
+  severity: CRITICAL
+  target: uniqueness
+  threshold: 96.0
+- dimension: Security
+  operator: eq
+  rule_id: POL-PII-01
+  severity: BLOCKER
+  target: unmasked_pii_count
+  threshold: 0
+- dimension: Stability
+  operator: lte
+  rule_id: POL-DRIFT-01
+  severity: CRITICAL
+  target: dataset_drift_ratio
+  threshold: 0.2
+- dimension: Overall
+  operator: gte
+  rule_id: POL-COMPOSITE-01
+  severity: BLOCKER
+  target: composite_total
+  threshold: 90.0
+target_platform: lakehouse_delta
+version: '2.0'

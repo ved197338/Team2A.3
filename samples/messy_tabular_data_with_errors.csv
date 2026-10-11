@@ -1,0 +1,13 @@
+id,first_name,last_name,email,age,phone_number,city,annual_income
+1,Barnaby,Higgins,bhiggins@fakemail,31,555-019-8234,Springfield,$45000
+2,Gary,Flapjack,gary.fax@snailmail.org,fifty-two,555-883-9912,Springfeild,52000
+3,Penelope,Vanderbilt,penelope@domain,29,N/A,New York,78000,EXTRA_COLUMN_VALUE,unexpected_data
+4,Arthur,Pendelton,arthur@camelot.co,-4,555-332-1100
+5,"Melissa",O'Connor,m.oconnor@web.,24,555-901-2244,"Boston, MA",61000
+6,Greg,Muffin,greg_muff@inbox,999,not_a_phone,Chicagoo,thirty_bucks
+7,Samantha,Jenkins,,28,555-441-0021,Seattle,
+8,Derek,"Unclosed quote,derek@badcsv.org,33,555-772-8819,Denver,59000
+id,first_name,last_name,email,age,phone_number,city,annual_income
+9,Chloe,Kowalski,chloe@site.com,27,555-112-9900,Austin,72000
+10,Zack,,zack@test.io,19,555-667-3344,Miami,-12000,
+11,Rober;,Smith,robert@@smith.net,41,,San Frncisco,94000

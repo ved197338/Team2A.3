@@ -1,0 +1,11 @@
+ customer_id ,age,email,city,credit_card,completion_pct,quantity,status
+C101,25,arun@example.com,Bangalore,4532015112830366,85.5,5,ACTIVE
+C102,28,priya@domain.org,bangalore,5425233430109903,92.0,12,ACTIVE
+C103,250,bad-email, Bangalore ,4111111111111111,180.0,-2,ACTIVE
+C104,,,BENGALURU,378282246310005,75.0,8,ACTIVE
+C105,31,suresh@corp.com,Mumbai,4532015112830366,,14,ACTIVE
+C101,25,arun@example.com,Bangalore,4532015112830366,85.5,5,ACTIVE
+C106,-5,user@@mail.com,mumbai,5105105105105100,-10.0,0,ACTIVE
+C107,42,neha@web.net,Delhi,4012888888881881,100.0,9,ACTIVE
+C108,NA,kavita@co.in,New Delhi,4222222222222,64.0,3,ACTIVE
+C109,38,raj@tech.io,Pune,5500000000000004,88.0,11,ACTIVE

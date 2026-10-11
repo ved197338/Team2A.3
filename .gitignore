@@ -1,0 +1,37 @@
+# Model Checkpoint Weights (>100MB exceeds GitHub limits)
+*.pth
+*.pt
+*.bin
+*.onnx
+*.safetensors
+*.ckpt
+*.h5
+checkpoints/
+models/
+
+# Python Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Python Bytecode, Notebooks & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb
+.ipynb_checkpoints/
+
+# Temporary, Logs & Scratch Data
+scratch/
+*.log
+*.pid
+server.log
+server.pid
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

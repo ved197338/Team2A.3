@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "dataset": {
+    "urn": "urn:li:dataset:(urn:li:dataPlatform:lakehouse-delta,customer_banking_features,PROD)",
+    "name": "customer_banking_features",
+    "platform": "lakehouse-delta",
+    "environment": "PROD",
+    "description": "Enterprise customer feature store dataset for AI/ML credit scoring and fraud detection models.",
+    "lineage": {
+      "upstream": [
+        "urn:li:dataset:(urn:li:dataPlatform:postgres,core_banking.accounts,PROD)",
+        "urn:li:dataset:(urn:li:dataPlatform:kafka,transactions.stream,PROD)"
+      ],
+      "downstream": [
+        "urn:li:mlModel:(urn:li:dataPlatform:mlflow,credit_risk_qwen_classifier,PROD)",
+        "urn:li:dataset:(urn:li:dataPlatform:delta,feature_store.customer_gold,PROD)"
+      ]
+    },
+    "owners": [
+      "data-governance@innovate.internal"
+    ],
+    "governance_classification": "RESTRICTED",
+    "sla_freshness_hours": 24
+  }
+}

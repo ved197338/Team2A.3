@@ -1,0 +1,37 @@
+[
+  {
+    "order_id": "ORD-101",
+    "customer": "John Doe",
+    "amount": 120.5,
+    "status": "completed",
+    "items": 2
+  },
+  {
+    "order_id": "ORD-102",
+    "customer": " Jane Smith ",
+    "amount": "45.00",
+    "status": "COMPLETED",
+    "items": 1
+  },
+  {
+    "order_id": "ORD-103",
+    "customer": "Bob Wilson",
+    "amount": null,
+    "status": "pending",
+    "items": -1
+  },
+  {
+    "order_id": "ORD-101",
+    "customer": "John Doe",
+    "amount": 120.5,
+    "status": "completed",
+    "items": 2
+  },
+  {
+    "order_id": "ORD-104",
+    "customer": "Alice Brown",
+    "amount": 350.0,
+    "status": "cancelled",
+    "items": 4
+  }
+]

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innov8 | Storage Optimization Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css?v=1791720272"1791720272">
+</head>
+<body class="isomorphic-root">
+  <main class="center-stage" id="center-stage">
+
+    <div class="top-nav-bar">
+      <div class="brand-pill">
+        <span class="brand-dot"></span>
+        <span class="brand-name">Innov8 Storage Engine</span>
+        <span class="brand-divider">/</span>
+        <span class="brand-model">ExtendedInnov8OptNet (105.6M)</span>
+      </div>
+      <div class="step-label" id="step-label">Step 1 of 5</div>
+    </div>
+
+    <h1 class="headline" id="headline">Storage Optimization</h1>
+
+    <p class="subtext" id="subtext">
+      Autonomous multi-tier storage optimization, intelligent drive relocation, and 100% SLA enforcement.
+    </p>
+
+    <div class="live-meta-bar" id="live-meta-bar" style="display: none;">
+      <span class="meta-label">Time elapsed:</span>
+      <span class="meta-timer" id="meta-timer">0.00s</span>
+    </div>
+
+    <div class="version-selector-strip" id="version-selector-strip">
+      <span class="version-label">Workflow:</span>
+      <button type="button" class="version-link active" id="ver-cluster-link">Simulated</button>
+      <button type="button" class="version-link" id="ver-laptop-link">Next: Version 2</button>
+    </div>
+
+    <div class="main-mode-nav" id="mode-selector">
+      <button type="button" class="mode-tab-btn active" id="mode-stream-link">
+        <span class="mt-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </span>
+        <div class="mt-info">
+          <span class="mt-title">Enterprise Stream</span>
+          <span class="mt-desc">Live multi-tenant storage telemetry</span>
+        </div>
+      </button>
+      <button type="button" class="mode-tab-btn" id="mode-csv-link">
+        <span class="mt-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </span>
+        <div class="mt-info">
+          <span class="mt-title">Upload Custom CSV</span>
+          <span class="mt-desc">Drag &amp; drop workload file or paste</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="cluster-size-strip" id="cluster-size-strip">
+      <span class="cluster-size-label">Workload Scale:</span>
+      <div class="scale-pills">
+        <button type="button" class="cluster-size-link active" data-count="18">18 Multi-Tenant</button>
+        <button type="button" class="cluster-size-link" data-count="24">24 Enterprise Fleet</button>
+        <button type="button" class="cluster-size-link" data-count="36">36 Multi-Cloud DC</button>
+        <button type="button" class="cluster-size-link" data-count="48">48 Hyper-Scale</button>
+      </div>
+    </div>
+
+    <div class="stage-one-actions" id="stage-one-actions">
+      <button type="button" class="btn-primary-action" id="btn-proceed-analysis">
+        <span class="btn-text">Run Storage Optimization</span>
+      </button>
+      <button type="button" class="btn-secondary-action" id="btn-refresh-stream">
+        <span class="btn-text">Fetch Next Data</span>
+      </button>
+    </div>
+
+    <div class="stream-preview" id="stream-preview"></div>
+
+    <div class="csv-input-block" id="csv-input-block" style="display: none;">
+      <div class="csv-header-strip">
+        <span class="csv-block-title">CUSTOM ENTERPRISE CSV WORKLOAD INGESTION</span>
+        <span class="csv-model-badge">ExtendedInnov8OptNet (105.6M) Evaluator</span>
+      </div>
+      <div class="csv-upload-dropzone" id="csv-dropzone">
+        <input type="file" id="csv-file-input" accept=".csv" style="display: none;" />
+        <div class="csv-dropzone-inner">
+          <span class="csv-upload-text">Drag &amp; drop enterprise workload CSV file here, or</span>
+          <button type="button" class="csv-browse-btn" id="btn-browse-csv">Browse CSV file</button>
+          <span class="csv-filename-display" id="csv-filename-display">No file selected</span>
+        </div>
+      </div>
+      <div class="csv-presets-strip">
+        <span class="preset-label">Or load benchmark sample:</span>
+        <button type="button" class="preset-link" id="preset-production">Enterprise Multi-Tenant</button>
+        <button type="button" class="preset-link" id="preset-ai-bloat">AI Model Checkpoints</button>
+        <button type="button" class="preset-link" id="preset-security-risk">High-SLA Database Traces</button>
+      </div>
+      <textarea id="csv-textarea" class="csv-textarea" rows="7" placeholder="filename,size_gb,iops,latency_ms,queue_depth,inactivity_days,workload_type,encryption,current_tier,desired_stack,desired_software"></textarea>
+      <div class="csv-status" id="csv-status">Waiting for CSV input or file upload...</div>
+    </div>
+
+    <div class="laptop-host-block" id="laptop-host-block" style="display: none;">
+      <div class="laptop-safety-banner">
+        <span class="safety-tag">STORAGE POLICY ENFORCEMENT</span>
+        <span class="safety-desc">Workstation Storage Policy: Lossless zip compression, INT8 dynamic quantization &amp; cache pinning.</span>
+      </div>
+      <div class="laptop-hardware-strip" id="laptop-hardware-strip"></div>
+      <div class="laptop-section-title">Active Running Tasks &amp; Processes on Workstation:</div>
+      <div class="laptop-procs-table-wrap" id="laptop-procs-table-wrap"></div>
+      <div class="laptop-section-title">Discovered Candidate Files on Workstation for Footprint Optimization:</div>
+      <div class="laptop-files-table-wrap" id="laptop-files-table-wrap"></div>
+    </div>
+
+    <div class="advanced-tools-drawer" id="advanced-tools-drawer">
+      <button type="button" class="drawer-toggle-btn" id="btn-toggle-advanced">
+        <div class="dt-left">
+          <span class="dt-title">Advanced Diagnostics &amp; Developer Tools</span>
+        </div>
+        <span class="dt-tag">Linux Terminal &middot; PyTorch Probe</span>
+      </button>
+
+      <div class="drawer-panel" id="drawer-panel" style="display: none;">
+        <div class="diagnostic-tools-strip" id="diagnostic-tools-strip">
+          <span class="version-label">Diagnostic Tool:</span>
+          <button type="button" class="version-link" id="mode-terminal-link">Linux Storage Terminal</button>
+          <button type="button" class="version-link" id="mode-probe-link">105.6M PyTorch Probe</button>
+        </div>
+
+        <div class="terminal-block" id="terminal-block" style="display: none;">
+          <div class="terminal-header-strip">
+            <span class="terminal-meta">Linux 6.12.8-innov8 · root@innov8-node-01:~#</span>
+            <div class="terminal-shortcuts">
+              <button type="button" class="terminal-shortcut-link" data-cmd="lsblk">lsblk</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="df -h">df -h</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="iostat">iostat</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="inspect_model">inspect_model</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="test_model">test_model</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="verify_weights">verify_weights</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="benchmark_model">benchmark_model</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="free -h">free -h</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="uptime">uptime</button>
+              <button type="button" class="terminal-shortcut-link" data-cmd="clear">clear</button>
+            </div>
+          </div>
+          <pre class="terminal-output" id="terminal-output"></pre>
+          <form class="terminal-input-row" id="terminal-form">
+            <span class="terminal-prompt">#</span>
+            <input type="text" class="terminal-input" id="terminal-input" placeholder="Type Linux command (e.g. lsblk, df -h, iostat, dmesg)..." autocomplete="off" spellcheck="false" />
+          </form>
+        </div>
+
+        <div class="probe-block" id="probe-block" style="display: none;">
+          <div class="probe-header-strip">
+            <span class="probe-meta">ExtendedInnov8OptNet (105,607,483 parameters in RAM · 403 MB)</span>
+            <span class="probe-status-tag">Live PyTorch Neural Module</span>
+          </div>
+          <div class="probe-controls-row">
+            <div class="probe-input-group">
+              <label class="probe-label" for="probe-iops">IOPS:</label>
+              <input type="number" id="probe-iops" class="probe-input" value="85000" step="500" />
+            </div>
+            <div class="probe-input-group">
+              <label class="probe-label" for="probe-lat">Latency (ms):</label>
+              <input type="number" id="probe-lat" class="probe-input" value="1.2" step="0.1" />
+            </div>
+            <div class="probe-input-group">
+              <label class="probe-label" for="probe-workload">Workload:</label>
+              <select id="probe-workload" class="probe-select">
+                <option value="0">AI Training Checkpoints</option>
+                <option value="1" selected>Production OLTP Database</option>
+                <option value="2">Analytics Data Lake</option>
+                <option value="3">Batch Backup</option>
+                <option value="4">Log Archive</option>
+              </select>
+            </div>
+            <div class="probe-check-group">
+              <label class="probe-check-label">
+                <input type="checkbox" id="probe-perturb" /> Perturb IOPS (+0.005 &epsilon;)
+              </label>
+            </div>
+            <button type="button" class="btn-probe-action" id="btn-run-probe">Run live forward pass</button>
+          </div>
+          <pre class="probe-output" id="probe-output">Click &#39;Run live forward pass&#39; to execute PyTorch matrix multiplication across 105.6M weights.</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="execution-status-card" id="execution-status-card" style="display: none;">
+      <div class="esc-header">
+        <span class="esc-stage-badge" id="esc-stage-badge">STAGE 2 / 5</span>
+        <span class="esc-stage-name" id="esc-stage-name">Neural Telemetry Analysis</span>
+        <span class="esc-progress-pct" id="esc-progress-pct">0%</span>
+      </div>
+      <div class="esc-progress-track">
+        <div class="esc-progress-fill" id="esc-progress-fill" style="width: 0%;"></div>
+      </div>
+      <div class="esc-body">
+        <div class="esc-detail-row">
+          <span class="esc-detail-lbl">Active Target:</span>
+          <span class="esc-detail-val" id="esc-active-item">Initializing neural controller...</span>
+        </div>
+        <div class="esc-detail-row">
+          <span class="esc-detail-lbl">Directive:</span>
+          <span class="esc-detail-val" id="esc-active-action">Loading 105.6M weights into RAM</span>
+        </div>
+      </div>
+      <div class="esc-metrics-row">
+        <div class="esc-m-box">
+          <span class="esc-m-val" id="esc-metric-items">0 / 18</span>
+          <span class="esc-m-lbl">Workloads Processed</span>
+        </div>
+        <div class="esc-m-box">
+          <span class="esc-m-val" id="esc-metric-reclaimed">0 MB</span>
+          <span class="esc-m-lbl">Capacity Reclaimed</span>
+        </div>
+        <div class="esc-m-box">
+          <span class="esc-m-val" id="esc-metric-savings">$0/mo</span>
+          <span class="esc-m-lbl">Financial Reduction</span>
+        </div>
+        <div class="esc-m-box">
+          <span class="esc-m-val" id="esc-metric-sla">100%</span>
+          <span class="esc-m-lbl">SLA Compliance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="processing-feed" id="processing-feed" style="display: none;"></div>
+
+    <div class="code-stream-block" id="code-stream-block" style="display: none;">
+      <div class="csb-header">Model writing Linux kernel directives:</div>
+      <pre class="code-stream-content" id="code-stream-content"></pre>
+    </div>
+
+    <div class="step-confirm-bar" id="step-confirm-bar" style="display: none;">
+      <div class="confirm-box">
+        <span class="confirm-prompt" id="confirm-prompt">Proceed to next step?</span>
+        <button type="button" class="btn-confirm-yes" id="btn-confirm-yes">Yes, continue &rarr;</button>
+      </div>
+    </div>
+
+    <div class="final-output" id="final-output" style="display: none;">
+      <div class="metrics-grid">
+        <div class="metric-block">
+          <span class="metric-number" id="metric-savings">$25,490</span>
+          <span class="metric-caption">monthly cost reduction</span>
+        </div>
+        <div class="metric-block">
+          <span class="metric-number" id="metric-sla">100%</span>
+          <span class="metric-caption">SLA compliance (latency &le; 3.0ms)</span>
+        </div>
+        <div class="metric-block">
+          <span class="metric-number" id="metric-compression">75.0%</span>
+          <span class="metric-caption">Unused file footprint reduction (Lossless INT8 / Zstandard)</span>
+        </div>
+      </div>
+
+      <div class="audit-breakdown" id="audit-breakdown"></div>
+
+      <div id="segregated-storage-container" class="segregated-storage-container" style="display: none;"></div>
+
+      <div id="public-benchmarks-container" class="public-benchmarks-container" style="display: none;"></div>
+    </div>
+
+    <div class="actions-strip" id="actions-strip" style="display: none;">
+      <button type="button" class="btn-report-download" id="action-download-pdf">
+        <span>Download Official PDF Report</span>
+      </button>
+      <button type="button" class="btn-report-outline" id="action-download-report">
+        <span>Download Markdown (.md)</span>
+      </button>
+      <button type="button" class="btn-report-outline" id="action-open-terminal">
+        <span>Open Terminal</span>
+      </button>
+      <button type="button" class="btn-report-outline" id="action-restart-process">
+        <span>Run Again</span>
+      </button>
+      <button type="button" class="btn-report-text" id="action-toggle-raw">
+        <span>Show Log</span>
+      </button>
+    </div>
+
+    <div class="raw-log-container" id="raw-log-container" style="display: none;">
+      <pre class="raw-log-text" id="raw-log-text"></pre>
+    </div>
+
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

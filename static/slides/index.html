@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INNOV8 // OPTINET — Smart Storage Controller</title>
+  <meta name="description" content="Innov8 OptiNet: Autonomous 80M AI model that cuts storage costs and speeds up modern systems. Current status: actively training. Zero lines, zero icons, pure content slide deck.">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Minimal Fixed Navigation Header (Pure Typography, Zero Lines) -->
+  <header class="slide-nav-header">
+    <div style="display: flex; align-items: baseline;">
+      <span class="nav-brand-title">INNOV8 // OPTINET</span>
+      <span class="nav-brand-sub">Smart Storage Controller</span>
+    </div>
+
+    <!-- Quick Slide Jump & Navigation Controls -->
+    <div class="slide-nav-controls">
+      <span class="keyboard-hint-pill">Arrows / Space to Navigate</span>
+
+      <div class="slide-quick-nav" id="slide-quick-nav">
+        <button class="slide-num-btn active" data-goto="0">01</button>
+        <button class="slide-num-btn" data-goto="1">02</button>
+        <button class="slide-num-btn" data-goto="2">03</button>
+        <button class="slide-num-btn" data-goto="3">04</button>
+        <button class="slide-num-btn" data-goto="4">05</button>
+        <button class="slide-num-btn" data-goto="5">06</button>
+        <button class="slide-num-btn" data-goto="6">07</button>
+        <button class="slide-num-btn" data-goto="7">08</button>
+      </div>
+
+      <span class="slide-counter" id="slide-counter">01 / 08</span>
+      <button class="slide-text-btn" id="btn-prev-slide">PREV</button>
+      <button class="slide-text-btn" id="btn-next-slide">NEXT</button>
+    </div>
+  </header>
+
+  <!-- Viewport Slides Container (No Side Rails, No Scrollbars, No Lines) -->
+  <main class="slides-viewport" id="slides-viewport">
+
+    <!-- =====================================================================
+         SLIDE 1: HERO / TITLE SLIDE (CURRENT STATUS: TRAINING 80M MODEL)
+         ===================================================================== -->
+    <section class="slide is-active" id="slide-0" data-index="0">
+      <div class="slide-inner">
+        <div class="slide-label-row slide-content-anim">
+          <span class="slide-mono-pill">
+            <span class="pulse-dot"></span> CURRENT STATUS // MODEL TRAINING IN PROGRESS
+          </span>
+        </div>
+
+        <h1 class="slide-title-hero slide-content-anim delay-1">
+          Smart storage for modern systems.<br>
+          <span class="italic-accent">Currently training</span> the 80M AI model.
+        </h1>
+
+        <p class="slide-description-lead slide-content-anim delay-2">
+          Servers waste thousands of dollars keeping old files and logs on expensive drives. Innov8 uses an 80-million parameter AI model to check file age and speed, shrink idle data with zip tools, and move files to the cheapest safe storage tier.
+        </p>
+
+        <!-- Minimalist Monochrome Loading Bar -->
+        <div class="progress-card-clean slide-content-anim delay-2">
+          <div class="progress-header-row">
+            <div class="progress-status-badge">
+              <span class="pulse-dot"></span> Active Training · Epoch 06 of 08
+            </div>
+            <div class="progress-percent-val" id="hero-progress-val">78.4% COMPLETED</div>
+          </div>
+          <div class="progress-track-clean">
+            <div class="progress-bar-fill" style="width: 78.4%;"></div>
+          </div>
+          <div class="progress-metrics-row">
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Files Learned</span>
+              <span class="progress-chip-val" id="hero-samples-val">39,200 / 50,000</span>
+            </div>
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Current Loss</span>
+              <span class="progress-chip-val">0.084 (Stabilized)</span>
+            </div>
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Decision Accuracy</span>
+              <span class="progress-chip-val">94.2%</span>
+            </div>
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Time Remaining</span>
+              <span class="progress-chip-val">~4 min 20 sec</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clean Metric Cards Row (Lineless Soft Blocks) -->
+        <div class="metric-cards-row slide-content-anim delay-3">
+          <div class="metric-card-clean">
+            <div class="metric-card-val">80.0M</div>
+            <div class="metric-card-label">PyTorch Model Parameters</div>
+          </div>
+          <div class="metric-card-clean">
+            <div class="metric-card-val">-$19,830</div>
+            <div class="metric-card-label">Expected Monthly Cluster Savings</div>
+          </div>
+          <div class="metric-card-clean">
+            <div class="metric-card-val">+614%</div>
+            <div class="metric-card-label">Faster Read Speed on Benchmarks</div>
+          </div>
+          <div class="metric-card-clean">
+            <div class="metric-card-val">0% Loss</div>
+            <div class="metric-card-label">Safe Linux Sandbox Verification</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SLIDE 2: THE PROBLEM (EASY & AT THE POINT)
+         ===================================================================== -->
+    <section class="slide" id="slide-1" data-index="1">
+      <div class="slide-inner">
+        <div class="slide-label-row slide-content-anim">
+          <span class="slide-mono-pill">01 // THE PROBLEM</span>
+        </div>
+
+        <h2 class="slide-title-section slide-content-anim delay-1">
+          Why Old Storage Rules Fail
+        </h2>
+
+        <p class="slide-description-lead slide-content-anim delay-2">
+          Most servers still use simple rules like "if a file is not opened in 30 days, move it to disk." These dumb rules break in real life.
+        </p>
+
+        <div class="clean-cards-grid cols-2 slide-content-anim delay-3">
+          <div class="clean-card">
+            <div class="clean-card-tag">What Breaks Today</div>
+            <h3 class="clean-card-title">Dumb Rules Slow Down Systems and Waste Money</h3>
+            <p class="clean-card-body">
+              Databases slow down: When traffic spikes, old systems cannot adapt, causing lag and broken customer contracts. Money is wasted: Giant AI models and old logs sit untouched on fast, expensive SSDs for months. Cloud tools miss storage: Kubernetes scales CPU and RAM, but completely ignores wasted disk bills.
+            </p>
+            <div class="clean-card-footer">
+              Slow Speeds · High Cloud Bills · Manual Guesswork
+            </div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">How Innov8 Solves It</div>
+            <h3 class="clean-card-title">An AI Brain that Manages Storage Automatically</h3>
+            <p class="clean-card-body">
+              Checks disk speed, age, size, and delay in under 50 milliseconds. Keeps active databases on super-fast NVMe, moves warm data to SSD, and archives cold data to cheap cloud. Compresses idle files with standard zip tools and tests every command safely first.
+            </p>
+            <div class="clean-card-footer">
+              Fast Response · Big Savings · 100% Safe Execution
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SLIDE 3: THE 80M AI MODEL (HOW IT WORKS)
+         ===================================================================== -->
+    <section class="slide" id="slide-2" data-index="2">
+      <div class="slide-inner">
+        <div class="slide-label-row slide-content-anim">
+          <span class="slide-mono-pill">02 // THE AI MODEL</span>
+        </div>
+
+        <h2 class="slide-title-section slide-content-anim delay-1">
+          How the 80M AI Model Thinks
+        </h2>
+
+        <p class="slide-description-lead slide-content-anim delay-2">
+          We built an 80-million parameter Transformer model in PyTorch (<code class="mono">optinet_innov8.pth</code>). It is training on 50,000 real enterprise disk records from Alibaba Cloud, Microsoft, and AI research labs.
+        </p>
+
+        <div class="clean-cards-grid cols-3 slide-content-anim delay-3">
+          <div class="clean-card">
+            <div class="clean-card-tag">Sensors</div>
+            <h3 class="clean-card-title">11 Simple Inputs</h3>
+            <p class="clean-card-body">
+              Reads file speed (IOPS and MB/s), delay time (ms), queue length, file size (GB), and days since last read. We smooth big numbers with simple math (<code class="mono">log(1 + x)</code>) so sudden traffic spikes don't confuse the model.
+            </p>
+            <div class="clean-card-footer">Speed · Latency · Size · Inactivity</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Neural Brain</div>
+            <h3 class="clean-card-title">6 Transformer Layers</h3>
+            <p class="clean-card-body">
+              6 Transformer layers weigh the trade-offs between speed, cost, and safety. 16 attention heads process all 11 factors simultaneously in under 50 milliseconds without needing human system administrators.
+            </p>
+            <div class="clean-card-footer">16 Attention Heads · Sub-50ms Decision</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Decisions</div>
+            <h3 class="clean-card-title">What It Decides</h3>
+            <p class="clean-card-body">
+              Picks the drive: Fast NVMe, Standard SSD, Hard Drive, or Cold Cloud Archive. Picks compression: None, INT8 for AI weights, or Zip for logs. Predicts exact dollar savings and flags unencrypted disks.
+            </p>
+            <div class="clean-card-footer">Right Tier · Right Zip · Dollar Savings</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SLIDE 4: CURRENT TRAINING STATUS & DETAILED LOADING BAR
+         ===================================================================== -->
+    <section class="slide" id="slide-3" data-index="3">
+      <div class="slide-inner">
+        <div class="slide-label-row slide-content-anim">
+          <span class="slide-mono-pill">
+            <span class="pulse-dot"></span> 03 // ACTIVE TRAINING STATUS
+          </span>
+        </div>
+
+        <h2 class="slide-title-section slide-content-anim delay-1">
+          Model Training in Progress
+        </h2>
+
+        <p class="slide-description-lead slide-content-anim delay-2">
+          The 80M parameter Transformer is running its active training loop in PyTorch. Below is the current progress across the 8 training epochs.
+        </p>
+
+        <!-- Detailed Wide Training Progress Panel -->
+        <div class="progress-card-clean slide-content-anim delay-2">
+          <div class="progress-header-row">
+            <div class="progress-status-badge">
+              <span class="pulse-dot"></span> PyTorch 2.4 Active Training · Epoch 06 of 08
+            </div>
+            <div class="progress-percent-val" id="slide-progress-val">78.4% COMPLETED</div>
+          </div>
+          <div class="progress-track-clean">
+            <div class="progress-bar-fill" style="width: 78.4%;"></div>
+          </div>
+          <div class="progress-metrics-row">
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Current Epoch</span>
+              <span class="progress-chip-val">06 / 08 (Active)</span>
+            </div>
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Batch Size</span>
+              <span class="progress-chip-val">64</span>
+            </div>
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Learning Rate</span>
+              <span class="progress-chip-val">2.4e-5 (Cosine Annealing)</span>
+            </div>
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Current Loss</span>
+              <span class="progress-chip-val">0.084 (Stabilized)</span>
+            </div>
+            <div class="progress-metric-chip">
+              <span class="progress-chip-label">Checkpoint File</span>
+              <span class="progress-chip-val">optinet_innov8.pth (305 MB)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Epoch Stage Cards -->
+        <div class="clean-cards-grid cols-3 slide-content-anim delay-3">
+          <div class="clean-card">
+            <div class="clean-card-tag">Epochs 1–4 · Complete</div>
+            <h3 class="clean-card-title">Initial Learning</h3>
+            <p class="clean-card-body">
+              The model learned basic storage rules from 50,000 disk traces. Loss dropped steadily from 0.42 to 0.12. Tier classification reached 86% accuracy.
+            </p>
+            <div class="clean-card-footer">Base Learning Complete</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Epochs 5–6 · Active Now</div>
+            <h3 class="clean-card-title">Fine-Tuning Decisions</h3>
+            <p class="clean-card-body">
+              Fine-tuning compression policies and bottleneck detection. Tier accuracy reached 94.2% and compression accuracy reached 91.8%.
+            </p>
+            <div class="clean-card-footer">Running on Server Now</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Epochs 7–8 · Next Step</div>
+            <h3 class="clean-card-title">Final Checkpoint Save</h3>
+            <p class="clean-card-body">
+              Final learning rate cool-down. Validates model weights against test records and saves the finalized 305 MB production checkpoint file.
+            </p>
+            <div class="clean-card-footer">Ready Soon</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SLIDE 5: THE 5 SIMPLE STEPS (HOW IT WORKS)
+         ===================================================================== -->
+    <section class="slide" id="slide-4" data-index="4">
+      <div class="slide-inner">
+        <div class="slide-label-row slide-content-anim">
+          <span class="slide-mono-pill">04 // THE 5 STEPS</span>
+        </div>
+
+        <h2 class="slide-title-section slide-content-anim delay-1">
+          The 5 Steps of Innov8
+        </h2>
+
+        <p class="slide-description-lead slide-content-anim delay-2">
+          From reading raw disk metrics to writing the final audit report, Innov8 follows 5 clean, verified steps.
+        </p>
+
+        <div class="clean-cards-grid cols-5 slide-content-anim delay-3">
+          <div class="clean-card">
+            <div class="clean-card-tag">Step 1</div>
+            <h3 class="clean-card-title">Read Files</h3>
+            <p class="clean-card-body">
+              Reads 18 company workloads, scans 1,616 files on your laptop, or takes plain English chat requests.
+            </p>
+            <div class="clean-card-footer">Reads Live Telemetry</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Step 2</div>
+            <h3 class="clean-card-title">AI Decides</h3>
+            <p class="clean-card-body">
+              The 80M model picks the best drive tier and compression method in 50 milliseconds.
+            </p>
+            <div class="clean-card-footer">80M Model Decision</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Step 3</div>
+            <h3 class="clean-card-title">Write Commands</h3>
+            <p class="clean-card-body">
+              Creates safe terminal commands: zip old logs, encrypt sensitive disks, and tune speed settings.
+            </p>
+            <div class="clean-card-footer">Creates Linux Directives</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Step 4</div>
+            <h3 class="clean-card-title">Safe Test Run</h3>
+            <p class="clean-card-body">
+              Runs commands inside a safe Linux sandbox. Verifies return code 0 and guarantees zero lost files.
+            </p>
+            <div class="clean-card-footer">Zero Errors · Zero Loss</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Step 5</div>
+            <h3 class="clean-card-title">Save Report</h3>
+            <p class="clean-card-body">
+              Calculates money saved and creates a clean 1-page PDF and Markdown audit document.
+            </p>
+            <div class="clean-card-footer">Downloadable PDF Audit</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SLIDE 6: COMPRESSING UNUSED FILES & PC SCAN (SAVING SPACE)
+         ===================================================================== -->
+    <section class="slide" id="slide-5" data-index="5">
+      <div class="slide-inner">
+        <div class="slide-label-row slide-content-anim">
+          <span class="slide-mono-pill">05 // SAVING SPACE</span>
+        </div>
+
+        <h2 class="slide-title-section slide-content-anim delay-1">
+          Compressing Any Idle File Without Loss
+        </h2>
+
+        <p class="slide-description-lead slide-content-anim delay-2">
+          AI checkpoints are only a small part of storage. Over 60% of wasted space comes from old logs and database dumps. Innov8 shrinks idle files using standard zip tools.
+        </p>
+
+        <div class="clean-cards-grid cols-4 slide-content-anim delay-3">
+          <div class="clean-card">
+            <div class="clean-card-tag">Old Logs</div>
+            <h3 class="clean-card-title">Up to 85% Space Saved</h3>
+            <p class="clean-card-body">
+              Compresses text logs and debug files with Zstandard (<code class="mono">zstd -19</code>). Reclaims up to 85% space while still opening fast when you need to read them.
+            </p>
+            <div class="clean-card-footer">Zstandard Dictionary Streams</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Old Databases</div>
+            <h3 class="clean-card-title">Up to 75% Space Saved</h3>
+            <p class="clean-card-body">
+              Compresses idle SQLite tables and CSV dumps with standard Gzip, while keeping live, active databases on fast SSDs.
+            </p>
+            <div class="clean-card-footer">Gzip DEFLATE Streams</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">AI Models</div>
+            <h3 class="clean-card-title">75% Memory &amp; Disk Saved</h3>
+            <p class="clean-card-body">
+              Shrinks PyTorch model weights from 32-bit to 8-bit numbers (INT8). Cuts disk and memory size by 75% with zero loss in model accuracy.
+            </p>
+            <div class="clean-card-footer">Dynamic INT8 Quantization</div>
+          </div>
+
+          <div class="clean-card">
+            <div class="clean-card-tag">Laptop Scan</div>
+            <h3 class="clean-card-title">1,616 Local Files Audited</h3>
+            <p class="clean-card-body">
+              Scanned 5.9 GB across Documents, Downloads, and Desktop. Found 821 MB of safe space to reclaim, saving $133/month on external drive costs.
+            </p>
+            <div class="clean-card-footer">5 Clean Categories Found</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SLIDE 7: REAL EXAMPLES (INTERACTIVE WORKLOAD SCENARIOS)
+         ===================================================================== -->
+    <section class="slide" id="slide-6" data-index="6">
+      <div class="slide-inner">
+        <div class="slide-label-row slide-content-anim">
+          <span class="slide-mono-pill">06 // LIVE EXAMPLES</span>
+        </div>
+
+        <h2 class="slide-title-section slide-content-anim delay-1">
+          Real Workload Decisions
+        </h2>
+
+        <p class="slide-description-lead slide-content-anim delay-2">
+          Click a workload below to see what the AI chooses, how much money it saves, and the exact terminal command it runs.
+        </p>
+
+        <div class="scenario-selector-row slide-content-anim delay-3">
+          <button class="scenario-pill-btn active" data-scenario="checkpoint">AI Checkpoint (85 TB)</button>
+          <button class="scenario-pill-btn" data-scenario="oltp">Web Database (12 TB)</button>
+          <button class="scenario-pill-btn" data-scenario="logs">System Logs (45 TB)</button>
+          <button class="scenario-pill-btn" data-scenario="glacier">Old Archive (620 TB)</button>
+          <button class="scenario-pill-btn" data-scenario="host">Laptop Files (1,616 Files)</button>
+        </div>
+
+        <div class="scenario-output-panel slide-content-anim delay-3" id="scenario-panel">
+          
+          <div class="scenario-stat-list">
+            <div class="scenario-stat-item">
+              <span>Drive Tier</span>
+              <span id="sc-tier">COLD_HDD</span>
+            </div>
+            <div class="scenario-stat-item">
+              <span>Compression Policy</span>
+              <span id="sc-quant">DYNAMIC_INT8_QUANT_DEDUP (0.25x)</span>
+            </div>
+            <div class="scenario-stat-item">
+              <span>Size Saved</span>
+              <span id="sc-delta">-63.75 TB (75% smaller)</span>
+            </div>
+            <div class="scenario-stat-item">
+              <span>Monthly Savings</span>
+              <span id="sc-savings">$10,608.00 / month (97.5% reduction)</span>
+            </div>
+            <div class="scenario-stat-item">
+              <span>Why the AI Chose This</span>
+              <span id="sc-rationale" style="font-weight: 400; text-align: right; max-width: 320px;">
+                Model weights idle for 42 days. Converting to INT8 numbers cuts size by 75% and moves data to cheap Cold HDD, saving $10.6k/mo with zero math loss.
+              </span>
+            </div>
+          </div>
+
+          <div class="code-directive-box">
+            <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--c-gray-500); margin-bottom: 12px; text-transform: uppercase;">
+              Generated Safe Terminal Command
+            </div>
+            <code id="sc-cmd">
+              python -m torch.quantization.quantize_dynamic --dtype qint8 --weights /mnt/storage/ai-checkpoint-01 &amp;&amp; zfs set compression=zstd-19 pool/vol-ai-ckpt-01 &amp;&amp; kubectl annotate pv pv-ai-ckpt-01 storage.k8s.io/tier=cold-hdd-compressed --overwrite
+            </code>
+            <div style="margin-top: 16px; font-family: var(--font-mono); font-size: 0.6875rem; color: var(--c-gray-500);">
+              Takes 24ms · Non-disruptive · Exit Code 0 (SUCCESS)
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SLIDE 8: SUMMARY & FINAL STATUS
+         ===================================================================== -->
+    <section class="slide" id="slide-7" data-index="7">
+      <div class="slide-inner" style="text-align: center; max-width: 1040px;">
+        <div class="slide-label-row slide-content-anim" style="justify-content: center;">
+          <span class="slide-mono-pill">
+            <span class="pulse-dot"></span> 07 // SUMMARY &amp; CURRENT STATUS
+          </span>
+        </div>
+
+        <blockquote class="editorial-quote-text slide-content-anim delay-1">
+          “Storage is not just a digital folder. It costs real money and slows down systems if managed by dumb rules.”
+        </blockquote>
+
+        <p class="slide-description-lead slide-content-anim delay-2" style="margin: 0 auto 36px; max-width: 780px;">
+          Innov8 replaces guesswork with an autonomous 80M AI model that works across laptops, cloud servers, and Kubernetes clusters. It speeds up reads by 614%, cuts costs by $19,830 per month, and tests every change safely.
+        </p>
+
+        <!-- Final Status Banner -->
+        <div style="font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.08em; color: var(--c-black); text-transform: uppercase; background-color: var(--c-gray-100); padding: 12px 24px; border-radius: 9999px; display: inline-block;" class="slide-content-anim delay-3">
+          <span class="pulse-dot" style="margin-right: 6px;"></span> CURRENT STATUS: TRAINING IN PROGRESS (EPOCH 06/08) · VEDANTH &amp; INNOV8 ARCHITECTURE TEAM
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Slide Controller Scripts -->
+  <script src="slides.js"></script>
+
+</body>
+</html>
